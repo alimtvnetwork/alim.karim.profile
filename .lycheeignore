@@ -1,0 +1,4 @@
+# LinkedIn always returns 999 to bots
+^https?://(www\.)?linkedin\.com/
+# Dead YouTube link (private/removed)
+^https://www\.youtube\.com/watch\?v=G6HyEeEcB-w

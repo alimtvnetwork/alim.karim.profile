@@ -1,0 +1,33 @@
+# Files / patterns excluded when deploying the GitHub profile / README mirror.
+# Consumed by scripts/deploy-profile.ps1.
+#
+# Rule format: one glob per line, '#' starts a comment, blank lines ignored.
+# Matched case-insensitively against the file's repo-relative path.
+
+# --- CV is private / separately distributed, never ship to profile ---
+CV.md
+**/CV.md
+assets/08-CV-*.pdf
+**/*.pdf
+
+# --- Lovable / build / tooling — never relevant to the GitHub profile ---
+.lovable/**
+node_modules/**
+dist/**
+.output/**
+.tanstack/**
+.wrangler/**
+src/**
+public/**
+scripts/**
+.github/**
+package.json
+package-lock.json
+bun.lock
+bun.lockb
+tsconfig*.json
+vite.config.*
+app.config.*
+.gitignore
+.deployignore
+.dev.vars

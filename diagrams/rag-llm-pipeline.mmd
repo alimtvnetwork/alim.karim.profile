@@ -1,0 +1,34 @@
+%% RAG & LLM Pipeline — Md. "Alim Ul Karim" (via Riseup Asia LLC)
+%% Sources: [1] Auk NuGet 480K+ (https://www.nuget.org/profiles/Auk)
+%%          [2] Stack Overflow 2,452+ rep since 2010 (https://stackoverflow.com/users/513511/md-alim-ul-karim)
+%%          [3] Crossover top 1% (https://www.crossover.com/)
+%%          [4] Riseup Asia LLC 137+ clients (../riseup-asia-137-plus-clients-served.md)
+%%          [5] AI Spec Management System (../inventions/ai-spec-management-system.md)
+%%          [6] Org-chart architecture   (../inventions/org-chart-architecture.md)
+%%          [7] AI-driven SW engineering (../inventions/ai-driven-software-engineering.md)
+flowchart LR
+    U["User Query<br/>[6] org-chart routed"] --> G{"Guardrails IN<br/>PII redact · injection filter"}
+    G --> R["Retriever<br/>hybrid BM25 + dense<br/>pgvector · Qdrant · Pinecone"]
+    R --> RR["Re-ranker<br/>cross-encoder + freshness"]
+    RR --> CB["Context Builder<br/>chunk merge · token budget"]
+    CB --> O["LLM Orchestrator<br/>multi-model routing<br/>tool-calling · streaming"]
+    O --> V{"Guardrails OUT<br/>schema · citation check"}
+    V --> A["Answer + Citations"]
+
+    subgraph IDX["Indexing (offline)"]
+      D["Sources<br/>docs · DB · APIs"] --> C["Chunker<br/>semantic + overlap"]
+      C --> E["Embeddings<br/>OpenAI · Cohere · OSS"]
+      E --> VS[("Vector Store")]
+    end
+    VS -.-> R
+
+    subgraph EV["Eval & Ops [5][7]"]
+      GS["Golden set"] --> J["LLM-as-judge<br/>+ human calibration"]
+      J --> M["Metrics<br/>faithfulness · latency · $/query"]
+      M --> AL["Regression alerts"]
+    end
+    A -.-> J
+    O -.-> M
+
+    classDef proof fill:#0f3460,color:#fff,stroke:#e94560,stroke-width:1px;
+    class U,A proof;
