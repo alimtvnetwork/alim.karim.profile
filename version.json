@@ -1,12 +1,12 @@
 {
   "syncManifest": {
     "manifestVersion": "1.0.0",
-    "generatedAt": "2026-10-31T15:23:09Z",
+    "generatedAt": "2026-10-31T15:57:55Z",
     "sourceAuthority": "gitmap",
-    "assetCount": 1399,
+    "assetCount": 1400,
     "sectionHashes": {
       "prompts": "e938e660dfd8b71a10873bf812fce5a3598c07ad1bca68011bc286cc8a3ffe7d",
-      "scripts": "bc47582731ef33373dcb0eda4568b61d06376c657cd4fad436f31db751628f09",
+      "scripts": "8201497101ddc3ae9201eff06ef5a764a7283bcdeba1c4519ce1788c4c20e543",
       "skills": "0656c6a9d944d173411b733ee01ac052a3d611d292db36478df2173718c1e426",
       "specs": "8fe658b0ee2c54cb020dd588227c89f0a8e8147cbbc6f309328dfed1e320de2c"
     },
@@ -1397,6 +1397,7 @@
       "03-ai-scripts/51-helptext-generator.py": "0f13540e3ecc0809b39960dad9a6cfbdc6a1e3ede9b573cf547cfbb7ff63bec5",
       "03-ai-scripts/51-verify-linux-cross-compile.py": "8abb9b32f1fee0e94fe4b1cc7e57e0f8474de3c3101402e42aed653a6fff4abe",
       "03-ai-scripts/52-file-size-check.py": "a1c0fd06bf98ce087d0815d65e6ff5df8965770e5523226bf67605d49c82cadf",
+      "03-ai-scripts/__pycache__/02-shared-engine.cpython-313.pyc": "992d3dd22217e61b86c1176ac1b9031698897dd173d0fffd0c8f7bea8b7a1cef",
       "03-ai-scripts/fix-spec-cross-links.py": "f4b4e963bebadcc40d49974c6908887ce92a329d7d2bf6182c59a8c4ad578561",
       "03-ai-scripts/generate-ui-remote-registry.py": "cd58c955671394b4bed7430a083a827704dc22e8505a88febc5d04355166dd78",
       "03-ai-scripts/update_categories.py": "f5698951ec94e19f55e5b89dbb959c057e7e47582c601154ad1378aa2959bb32",
