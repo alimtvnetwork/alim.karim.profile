@@ -1,5 +1,12 @@
 # Changelog
 
+## [v5.2.32] - 2026-11-11
+
+### Added
+- Synchronize prompts, skills, AI scripts, and coding guidelines
+
+---
+
 ## 0.4.2 - 2026-06-17
 
 ### Added
@@ -23,7 +30,6 @@
 - `bun run check:tooltips` → `[check-tooltips] legacy tooltip count: 0`.
 - `rg "AKA Alimul Karim" .` → 0 matches.
 
-
 ## 0.4.0 - 2026-06-16
 
 ### Changed
@@ -41,8 +47,6 @@
 ### Verified
 - Pre-rewrite baseline: 65 legacy tooltip hits, `check:profile` errored (script missing).
 - Post-rewrite: `bun run check:profile` exits 0 → `[check-tooltips] legacy tooltip count: 0` + `check-links: OK (17 files scanned)`.
-
-
 
 ## 0.3.0 - 2026-06-16
 
